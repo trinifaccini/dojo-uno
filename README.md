@@ -3,14 +3,31 @@
 
 
 ## Integrantes 
-- Esteban Marcelo Quiroz  
+- Sol Rubinetti
+- Yamila Sueldo
+- Adrian Barrientos
+- Lautaro Torres
+- Trinidad Faccini
 
+## Proyecto: DOJO NUMERO UNO
 
-## Proyecto: Contador binario.
-![Tinkercad](./img/ContadorBinario.png)
+## Consigna
+El gobierno de la ciudad quiere actualizar los semáforos que tiene instalados. La empresa  “UTNFRA Robotics” ganó la licitación y ahora les toca a los desarrolladores de la empresa generar  un proyecto low cost que cumpla con las especificaciones que el gobierno de la ciudad nos  impone, a saber las especificaciones son las siguientes. 
+
+# Primer entrega:
+1- El semáforo tiene que tener 2 leds de cada color como mínimo, en caso de que uno se  rompa. 
+2- Tiene que implementar los tiempos correctos como se detallan a continuación. 
+3- El verde dura 5 segundos. 
+4- El amarillo dura 3 segundos. 
+5- Rojo dura 5 segundos. 
+6- Tiene que tener señalización para personas no videntes como se detalla a  continuación. (Buzzer o piezo)
+7- Durante el rojo: Tiene que sonar 2 vez por segundo en un tono FUERTE. 
 
 
 ## Descripción
+En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+
+## Descripción/Explicacion/Finalidad del proyecto
 En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
 
 ## Función principal
@@ -18,7 +35,6 @@ Esta funcion se encarga de encender y apagar los leds.
 
 B0, B1, B2, B3 son #define que utilizamos para agregar los leds, asociandolo a pines de la placa arduino.
 
-(Breve explicación de la función)
 
 ~~~ C (lenguaje en el que esta escrito)
 void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
@@ -31,7 +47,7 @@ void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
 ~~~
 
 ## :robot: Link al proyecto
-- [proyecto](https://www.tinkercad.com/things/aOYiibnDjWu)
+- [proyecto]()
 ## :tv: Link al video del proceso
 - [video](https://www.youtube.com/watch?v=VyGjE8kx-O0)
 

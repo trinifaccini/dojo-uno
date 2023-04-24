@@ -36,15 +36,38 @@ En este parrafo deberan describir que funcion cumple su proyecto. Que solucion e
 ## Finalidad del proyecto
 
 ## Función principal
-Esta funcion se encarga de hacer sonar al buzzer por la cantidad de segundos y con la intensidad recibida por parametro y a su vez de silenciarlo por la misma cantidad de segundos que estuvo sonando.
 
-~~~ C (lenguaje en el que esta escrito)
-void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
+
+~~~ C++ 
+void loop()
 {
-  digitalWrite(B3,estado3);
-  digitalWrite(B2,estado2);
-  digitalWrite(B1,estado1);
-  digitalWrite(B0,estado0);
+  Serial.println("Encender luz verde x 5 segundos");
+  prenderLed(PIN_LED_VERDE_1);
+  prenderLed(PIN_LED_VERDE_2);
+  delay(5000);
+  Serial.println("Apagar luz verde");
+  apagarLed(PIN_LED_VERDE_1);
+  apagarLed(PIN_LED_VERDE_2); 
+  
+  Serial.println("Encender luz amarilla x 3 segundos");
+  prenderLed(PIN_LED_AMARILLO_1);
+  prenderLed(PIN_LED_AMARILLO_2);
+  delay(3000);
+  Serial.println("Apagar luz amarilla");
+
+  apagarLed(PIN_LED_AMARILLO_1);
+  apagarLed(PIN_LED_AMARILLO_2); 
+  
+  Serial.println("Encender luz roja x 5 segundos");
+  prenderLed(PIN_LED_ROJO_1);
+  prenderLed(PIN_LED_ROJO_2);
+  
+  // ESTA FUNCION DURA 5 SEGUNDOS
+  sonarSilenciarBuzzer(PIN_BUZZER, tiempo_buzzer);
+ 
+  Serial.println("Apagar luz roja");
+  apagarLed(PIN_LED_ROJO_1);
+  apagarLed(PIN_LED_ROJO_2); 
 }
 ~~~
 

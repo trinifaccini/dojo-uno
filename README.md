@@ -1,6 +1,6 @@
 # DOJO NUMERO UNO - GRUPO F
 
-![Tinkercard](.img/DOJO-UNO-GRUPO-F-ENTREGA UNO.jpg)
+![Tinkercard](.img/DOJO-UNO-GRUPO-F-ENTREGA UNO.png)
 
 ## Integrantes 
 - Sol Rubinetti

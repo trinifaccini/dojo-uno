@@ -30,55 +30,33 @@ El gobierno de la ciudad quiere actualizar los semáforos que tiene instalados. 
 13. Agregar un botón (pull down) que al presionarlo se active la funcionalidad de luz verde con más tiempo, dándole a la persona que lo necesite más tiempo para cruzar la calle , sirve para la próxima luz verde y solo para la próxima luz verde después de presionar el botón. el tiempo se duplicará. 
 14. Colocar dos semáforos de calles que se crucen  y programarlos para que funcionen en conjunto.
 
-## Descripción/Explicacion
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+## Descripción
+
+Creamos un semáforo con señalización para no videntes. 
 
 ## Finalidad del proyecto
+Demostrar los conocimientos aprendidos en la materia Sistema de Procesamiento de Datos.
 
 ## Función principal
 
+Esta función se encarga de hacer sonar al buzzer dos veces por el tiempo recibido por parametro y repite este comportamiento 10 veces. 
 
 ~~~ C++ 
-void loop()
-{
-  Serial.println("Encender luz verde x 5 segundos");
-  prenderLed(PIN_LED_VERDE_1);
-  prenderLed(PIN_LED_VERDE_2);
-  delay(5000);
-  Serial.println("Apagar luz verde");
-  apagarLed(PIN_LED_VERDE_1);
-  apagarLed(PIN_LED_VERDE_2); 
-  
-  Serial.println("Encender luz amarilla x 3 segundos");
-  prenderLed(PIN_LED_AMARILLO_1);
-  prenderLed(PIN_LED_AMARILLO_2);
-  delay(3000);
-  Serial.println("Apagar luz amarilla");
 
-  apagarLed(PIN_LED_AMARILLO_1);
-  apagarLed(PIN_LED_AMARILLO_2); 
+void sonarSilenciarBuzzer(int buzzer, int tiempo)
+{
+  int contador = 0;
   
-  Serial.println("Encender luz roja x 5 segundos");
-  prenderLed(PIN_LED_ROJO_1);
-  prenderLed(PIN_LED_ROJO_2);
-  
-  // ESTA FUNCION DURA 5 SEGUNDOS
-  sonarSilenciarBuzzer(PIN_BUZZER, tiempo_buzzer);
- 
-  Serial.println("Apagar luz roja");
-  apagarLed(PIN_LED_ROJO_1);
-  apagarLed(PIN_LED_ROJO_2); 
+  while (contador < 10)
+  {
+    sonarBuzzer(buzzer, tiempo, intensidad_fuerte);
+    silenciarBuzzer(buzzer, tiempo);
+    sonarBuzzer(buzzer, tiempo, intensidad_fuerte);
+    silenciarBuzzer(buzzer, tiempo);
+    contador = contador + 1;
+  }
 }
 ~~~
 
 ## :robot: Link al proyecto
 - [Tinkercard](https://www.tinkercad.com/things/8tPHbv0orHG)
-## :tv: Link al video del proceso
-- [Video]()
-
-
-
-
-
-
-

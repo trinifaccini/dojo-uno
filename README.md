@@ -42,6 +42,7 @@ Demostrar los conocimientos aprendidos en la materia Sistema de Procesamiento de
 ## Función principal
 
 Esta función se encarga de hacer sonar al buzzer dos veces por el tiempo recibido por parametro y repite este comportamiento 10 veces. 
+
 intensidad_fuerte es una variable global de tipo entero, que en nuestro caso tiene el valor 250. 
 
 ~~~ C++ 

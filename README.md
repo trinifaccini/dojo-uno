@@ -36,10 +36,7 @@ En este parrafo deberan describir que funcion cumple su proyecto. Que solucion e
 ## Finalidad del proyecto
 
 ## Función principal
-Esta funcion se encarga de encender y apagar los leds.
-
-B0, B1, B2, B3 son #define que utilizamos para agregar los leds, asociandolo a pines de la placa arduino.
-
+Esta funcion se encarga de hacer sonar al buzzer por la cantidad de segundos y con la intensidad recibida por parametro y a su vez de silenciarlo por la misma cantidad de segundos que estuvo sonando.
 
 ~~~ C (lenguaje en el que esta escrito)
 void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
@@ -52,9 +49,9 @@ void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
 ~~~
 
 ## :robot: Link al proyecto
-- [proyecto](https://www.tinkercad.com/things/8tPHbv0orHG)
+- [Tinkercard](https://www.tinkercad.com/things/8tPHbv0orHG)
 ## :tv: Link al video del proceso
-- [video]()
+- [Video]()
 
 
 

@@ -1,5 +1,7 @@
 # DOJO NUMERO UNO - GRUPO F
 
+![DOJO UNO-GRUPO F-ENTREGA UNO](https://user-images.githubusercontent.com/78211732/234117655-14c5df9c-4673-4405-b845-1c8bdda063de.png)
+
 ## Integrantes 
 - Sol Rubinetti
 - Yamila Sueldo
@@ -40,6 +42,7 @@ Demostrar los conocimientos aprendidos en la materia Sistema de Procesamiento de
 ## Función principal
 
 Esta función se encarga de hacer sonar al buzzer dos veces por el tiempo recibido por parametro y repite este comportamiento 10 veces. 
+intensidad_fuerte es una variable global de tipo entero, que en nuestro caso tiene el valor 250. 
 
 ~~~ C++ 
 

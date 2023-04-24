@@ -1,0 +1,95 @@
+/* DOJO UNO */
+
+#define PIN_LED_ROJO_1 13
+#define PIN_LED_ROJO_2 12
+#define PIN_LED_AMARILLO_1 11
+#define PIN_LED_AMARILLO_2 10
+#define PIN_LED_VERDE_1 9
+#define PIN_LED_VERDE_2 8
+#define PIN_BUZZER 5
+
+int intensidad_fuerte;
+
+void setup()
+{
+    pinMode(PIN_LED_ROJO_1, OUTPUT);   
+    pinMode(PIN_LED_AMARILLO_1, OUTPUT);  
+    pinMode(PIN_LED_VERDE_1, OUTPUT);
+    pinMode(PIN_LED_ROJO_2, OUTPUT);   
+    pinMode(PIN_LED_AMARILLO_2, OUTPUT);  
+    pinMode(PIN_LED_VERDE_2, OUTPUT);  
+    pinMode(PIN_BUZZER, OUTPUT);
+    
+    intensidad_fuerte = 220;
+    
+    Serial.begin(9600); 
+}
+
+// ESTA FUNCION VA A DURAR LO QUE VALGA LA VARIABLE tiempo
+void sonarBuzzer(int pin, int tiempo, int intensidad)
+{
+    tone(pin, intensidad);
+    delay(tiempo);
+}
+
+// ESTA FUNCION VA A DURAR LO QUE VALGA LA VARIABLE tiempo
+void silenciarBuzzer(int pin, int tiempo)
+{
+    noTone(pin);
+    delay(tiempo);
+}
+
+// ESTA FUNCION VA A DURAR LO QUE DUREN LAS FUNCIONES 
+// (sonarBuzzer + silenciarBuzzer) * 2
+void sonarSilenciarBuzzer(int pin, int tiempo)
+{
+    sonarBuzzer(pin, tiempo);
+    silenciarBuzzer(pin, tiempo);
+    sonarBuzzer(pin, tiempo);
+    silenciarBuzzer(pin, tiempo);
+}
+
+
+void prenderLed(int led)
+{
+    digitalWrite(led, HIGH);  
+}
+
+void apagarLed(int led)
+{
+    digitalWrite(led, LOW);  
+}
+
+
+void loop()
+{
+  
+    // PRENDE LA LUZ VERDE X 5 SEGUNDOS
+    prenderLed(PIN_LED_VERDE_1);
+    prenderLed(PIN_LED_VERDE_2);
+    delay(5000);
+    apagarLed(PIN_LED_VERDE_1);
+    apagarLed(PIN_LED_VERDE_2); 
+    
+    // PRENDE LA LUZ VERDE X 3 SEGUNDOS 
+    prenderLed(PIN_LED_AMARILLO_1);
+    prenderLed(PIN_LED_AMARILLO_2);
+    delay(3000);
+    apagarLed(PIN_LED_AMARILLO_1);
+    apagarLed(PIN_LED_AMARILLO_2); 
+  
+    // PRENDE LA LUZ ROJA X 5 SEGUNDOS 
+    prenderLed(PIN_LED_ROJO_1);
+    prenderLed(PIN_LED_ROJO_2);
+    
+    // ESTE BLOQUE DURA 5 SEGUNDOS "delay" 
+    sonarSilenciarBuzzer(PIN_BUZZER, intensidad_fuerte);
+    sonarSilenciarBuzzer(PIN_BUZZER, intensidad_fuerte);
+    sonarSilenciarBuzzer(PIN_BUZZER, intensidad_fuerte);
+    sonarSilenciarBuzzer(PIN_BUZZER, intensidad_fuerte);
+    sonarSilenciarBuzzer(PIN_BUZZER, intensidad_fuerte);
+    
+    apagarLed(PIN_LED_ROJO_1);
+    apagarLed(PIN_LED_ROJO_2); 
+  
+}

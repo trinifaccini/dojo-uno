@@ -1,4 +1,4 @@
-# Proyecto: DOJO NUMERO UNO
+# DOJO NUMERO UNO - GRUPO F
 
 ## Integrantes 
 - Sol Rubinetti
